@@ -1,0 +1,18 @@
+<resources>
+    <color name="colorPrimary">#FF5722</color>
+    <color name="colorPrimaryDark">#E64A19</color>
+    <color name="colorAccent">#FFC107</color>
+    <color name="cardBackground">#FFFFFFFF</color>
+    <color name="textColor">#FF000000</color>
+    <color name="backgroundColor">#E7D7A2</color>
+    <color name="doneColor">#FFB0FFC5</color>
+    <color name="undoneColor">#FFFFF5F5</color>
+    <color name="gray">#FFCCCCCC</color>
+    <color name="progressColor4">#FF2196F3</color>
+    <color name="progressColor3">#FF4CAF50</color>
+    <color name="progressColor2">#CEBC86</color>
+    <color name="progressColor1">#FFFF5722</color>
+    <color name="progressColor5">#FF9C27B0</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

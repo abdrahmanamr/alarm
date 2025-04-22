@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Saheni</string>
+    <string name="splash_hint_1">استيقظ مبكرًا لتنظم يومك</string>
+    <string name="splash_hint_2">الصباح هو بداية النجاح</string>
+    <string name="splash_hint_3">كل صباح فرصة جديدة</string>
+    <string name="splash_hint_4">تنظيم الوقت سر النجاح</string>
+    <string name="splash_hint_5">ابدأ يومك بطاقة إيجابية</string>
+    <string name="hint_loading">جاري تحميل المنبهات...</string>
+    <string name="btn_add">إضافة</string>
+    <string name="btn_delete">مسح</string>
+    <string name="btn_night_mode">وضع ليلي</string>
+    <string name="btn_day_mode">وضع نهاري</string>
+    <string name="notification_channel_id">AlarmsChannel</string>
+    <string name="notification_channel_name">إشعارات المنبه</string>
+    <string name="notification_channel_desc">تنبيه المنبه</string>
+</resources>

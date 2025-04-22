@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- حقل اختيار الوقت -->
+        <EditText
+            android:id="@+id/etTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="اختر وقت الرنين (مثال: 06:00)"
+            android:focusable="false" />
+
+        <!-- مجموعة مفاتيح الأيام -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+
+            <Switch
+                android:id="@+id/switchSunday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="الأحد"
+                tools:ignore="UseSwitchCompatOrMaterialXml,TouchTargetSizeCheck" />
+
+            <Switch
+                android:id="@+id/switchMonday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="الإثنين"
+                tools:ignore="UseSwitchCompatOrMaterialXml,TouchTargetSizeCheck" />
+
+            <Switch
+                android:id="@+id/switchTuesday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="الثلاثاء"
+                tools:ignore="TouchTargetSizeCheck" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <Switch
+                android:id="@+id/switchWednesday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="الأربعاء"
+                tools:ignore="UseSwitchCompatOrMaterialXml,TouchTargetSizeCheck" />
+
+            <Switch
+                android:id="@+id/switchThursday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="الخميس"
+                tools:ignore="UseSwitchCompatOrMaterialXml,TouchTargetSizeCheck" />
+
+            <Switch
+                android:id="@+id/switchFriday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="الجمعة"
+                tools:ignore="UseSwitchCompatOrMaterialXml,TouchTargetSizeCheck" />
+
+            <Switch
+                android:id="@+id/switchSaturday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="السبت"
+                tools:ignore="TouchTargetSizeCheck" />
+        </LinearLayout>
+
+        <!-- حقل اختيار النغمة -->
+        <Button
+            android:id="@+id/btnSelectTone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="اختر النغمة"
+            android:layout_marginTop="16dp"/>
+
+        <!-- حقل لإدخال وعرض التواريخ المختارة -->
+        <EditText
+            android:id="@+id/etDates"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="التواريخ المختارة ستظهر هنا"
+            android:focusable="false"
+            android:layout_marginTop="16dp"/>
+
+        <Button
+            android:id="@+id/btnAddDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="إضافة تاريخ"
+            android:layout_marginTop="8dp"/>
+
+        <!-- حقل الملاحظة -->
+        <EditText
+            android:id="@+id/etNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="اكتب ملاحظة الرنين هنا"
+            android:layout_marginTop="16dp" />
+
+        <!-- أزرار الحفظ والحذف -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/btnDeleteAlarm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="مسح" />
+
+            <Button
+                android:id="@+id/btnSaveAlarm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="حفظ"
+                android:layout_marginStart="16dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
