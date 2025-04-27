@@ -48,9 +48,22 @@
             android:name=".ui.AlarmTestActivity"
             android:exported="true"/>
 
+        <activity
+            android:name=".ui.ChallengeActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".ui.ButtonGameActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".ui.MathQuizActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".ui.StepChallengeActivity"
+            android:exported="true"/>
+
         <!-- مستقبل التنبيه عند وصول موعد المنبه -->
         <receiver
-            android:name=".service.AlarmReceiver"
+            android:name=".AlarmReceiver"
             android:exported="true"
             tools:ignore="ExportedReceiver" />
     </application>

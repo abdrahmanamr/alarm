@@ -1,19 +1,25 @@
-package mystery.anonymous.saheni.service;
+package mystery.anonymous.saheni;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
+import android.media.AudioManager;
+import android.media.RingtoneManager;
+
+import mystery.anonymous.saheni.ui.ChallengeActivity;
 
 public class AlarmReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
+        // Set volume to max
+        AudioManager am = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
+        am.setStreamVolume(AudioManager.STREAM_ALARM, am.getStreamMaxVolume(AudioManager.STREAM_ALARM), 0);
 
-        Log.d("AlarmReceiver", "Alarm received for id: " + intent.getIntExtra("alarmId", -1));
-
-        // فتح شاشة الاختبار أو شاشة الرنين
-        Intent testIntent = new Intent(context, mystery.anonymous.saheni.ui.AlarmTestActivity.class);
-        testIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        context.startActivity(testIntent);
+        // Get ringtone URI
+        String uri = intent.getStringExtra("ringtone");
+        Intent i = new Intent(context, ChallengeActivity.class);
+        i.putExtra("ringtone", uri);
+        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(i);
     }
 }
