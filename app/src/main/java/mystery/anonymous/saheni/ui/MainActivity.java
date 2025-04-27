@@ -10,7 +10,11 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
+
 import mystery.anonymous.saheni.R;
 import mystery.anonymous.saheni.adapter.AlarmAdapter;
 import mystery.anonymous.saheni.model.Alarm.AlarmEntity;
@@ -76,6 +80,19 @@ public class MainActivity extends BasePermissionsActivity implements AlarmAdapte
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        String[] needed = { /* قائمة الصلاحيات المهمة */ };
+        List<String> missing = Arrays.stream(needed)
+                .filter(p -> checkSelfPermission(p)!=GRANTED)
+                .collect(Collectors.toList());
+        if (!missing.isEmpty()) {
+            // إنشاء إشعار يحتوي زر لإعادة طلب الصلاحيات عبر Intent إلى BasePermissionsActivity
+        }
+
     }
 
     @Override

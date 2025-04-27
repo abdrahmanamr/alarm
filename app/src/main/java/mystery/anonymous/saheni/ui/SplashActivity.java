@@ -30,12 +30,14 @@ public class SplashActivity extends AppCompatActivity {
 
         showRandomHint();
 
+        for (int i = 1; i <= 3; i++) {
+            handler.postDelayed(this::showRandomHint, 2000L * i);
+        }
         handler.postDelayed(() -> {
-            hintsShown++;
-            if (hintsShown < 2) {
-                showRandomHint();
-            }
-        }, 2000);
+            startActivity(new Intent(this, MainActivity.class));
+            finish();
+        }, 6000);
+
 
         handler.postDelayed(() -> {
             hintsShown++;
